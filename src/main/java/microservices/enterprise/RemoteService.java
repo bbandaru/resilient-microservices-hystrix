@@ -28,7 +28,7 @@ public class RemoteService {
         if (!isFaulty) {
             Thread.sleep(wait);
             System.out.println("Service Behavior : Successful");
-            return "Service Response : Successful! ";
+            return "Service Response : Hello World!";
         }
         System.out.println("Service Behavior : Faulty");
         throw new InterruptedException("IO Exception");

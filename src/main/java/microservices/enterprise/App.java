@@ -13,14 +13,15 @@ public class App {
     public static void main(String[] args) throws Exception{
 
 
-        testCircuitBreaker();
+        testTimeout();
+        // testCircuitBreaker();
 
 
     }
 
 
     public static void testTimeout() {
-        RemoteService service = new RemoteService(15_000);
+        RemoteService service = new RemoteService(3_000);
 
         HystrixCommand.Setter config = HystrixCommand
                 .Setter
